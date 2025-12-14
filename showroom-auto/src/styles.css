@@ -1,0 +1,36 @@
+/* Global styling for a cleaner, modern look */
+:root{
+	--brand-blue:#0b66a8; /* primary brand color */
+	--brand-blue-2:#4ba3e0; /* lighter accent */
+	--muted:#6c7a8a;
+	--card-radius:12px;
+}
+html,body{height:100%;}
+body{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(180deg, #f4f9ff, #ffffff);
+	color:#0e2433;
+	margin:0;
+	-webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:1180px;padding-left:18px;padding-right:18px}
+
+/* Footer */
+.site-footer{padding:18px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(0,0,0,0.04);background:transparent}
+
+/* Utility */
+.muted{color:var(--muted)}
+
+/* Brand button overrides to match palette */
+.btn-primary, .btn-success{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff}
+.btn-primary:hover, .btn-success:hover{background:var(--brand-blue-2);border-color:var(--brand-blue-2)}
+
+/* Cards */
+.card{border-radius:var(--card-radius);overflow:hidden}
+
+/* Utility link color */
+a{color:var(--brand-blue)}
+
+
+

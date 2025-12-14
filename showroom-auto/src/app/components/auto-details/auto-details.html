@@ -1,0 +1,14 @@
+<div *ngIf="auto" class="container details-card my-3">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img [src]="auto?.photo" [alt]="(auto?.brand || '') + ' ' + (auto?.model || '')" loading="lazy" class="detail-img" />
+    </div>
+    <div class="col-md-8">
+      <h3>{{auto?.brand}} {{auto?.model}}</h3>
+      <p class="price lead">{{auto?.price | currency:'TND'}}</p>
+      <p class="small">Power: {{auto?.power}} kW — Availability: {{auto?.availability}}</p>
+      <p>{{auto?.description}}</p>
+      <button class="btn btn-outline-secondary" (click)="close()">Close</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<app-head-bar [brands]="brands" (onSelectBrand)="selectedBrand = $event"></app-head-bar>
+<app-search-bar [autos]="autoList" [filterBrand]="selectedBrand" (onSelectAuto)="selectAuto($event)"></app-search-bar>
+
+<app-auto-details *ngIf="selectedAuto" [auto]="selectedAuto" (onClose)="clearSelection()"></app-auto-details>
+
+<footer class="site-footer">
+  <div class="container">
+    <small class="muted">© Showroom Auto — curated demo. Tell me what color palette you prefer and I will adapt the site.</small>
+  </div>
+</footer>
+
+<footer class="site-footer">Curated by Showroom Auto — handcrafted selection.</footer>
