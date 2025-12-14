@@ -1,0 +1,37 @@
+.header{padding:18px}
+.search-row{max-width:900px}
+input {color:var(--brand-blue);border:1px solid rgba(11,102,168,0.18);}
+
+
+.auto-container{
+	display:grid;
+	gap:18px;
+	grid-template-columns: repeat(1, 1fr);
+	align-items:start;
+}
+
+.card{margin:0;box-shadow: 0 10px 28px rgba(11,102,168,0.06);border-radius:10px}
+
+.card-body-even{background:linear-gradient(180deg,var(--brand-blue),var(--brand-blue-2));color:#fff}
+
+.card-body-odd{background:#ffffff;color:var(--brand-blue)}
+
+.card-img-top{height:150px;object-fit:cover;width:100%}
+
+/* Responsive columns: 1 on xs, 2 on md, 4 on lg+ */
+@media (min-width: 768px) {
+	.auto-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 992px) {
+	.auto-container { grid-template-columns: repeat(4, 1fr); }
+}
+
+.card:hover{transform:translateY(-6px);transition:transform .18s ease, box-shadow .18s ease}
+.card{transition:transform .18s ease}
+
+.card .card-title{font-weight:700}
+
+.card:hover{transform:translateY(-6px);transition:transform .18s ease, box-shadow .18s ease}
+.card{transition:transform .18s ease}
+
+

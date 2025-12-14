@@ -1,0 +1,26 @@
+<div class="container-fluid header py-3">
+  <div class="input-group input-group-lg mx-auto search-row">
+    <span class="input-group-text">Brand</span>
+    <input (input)="selectAutoList(brand.value)" #brand type="text" class="form-control" placeholder="Search by brand (e.g. Audi)">
+    <button (click)="selectAutoList(brand.value)" class="btn btn-success">Search</button>
+    <button (click)="selectAutoList('')" class="btn btn-outline-secondary">Show All</button>
+  </div>
+</div>
+
+<div class="container auto-container">
+  <ng-container *ngIf="selectedAutos?.length; else noCars">
+    <div class="card" *ngFor="let auto of selectedAutos; let indice = index; let even = even; let odd = odd">
+      <img [src]="auto.photo" [alt]="auto.brand + ' ' + auto.model" loading="lazy" class="card-img-top" />
+      <div class="card-body" [ngClass]="{'card-body-odd':odd,'card-body-even':even}">
+        <h5 class="card-title" [ngStyle]="autoTitleStyle(auto)"> {{auto.brand}} - {{auto.model}}</h5>
+        <p class="card-text small mb-1">Power : {{auto.power}} kW</p>
+        <p class="card-text small mb-1">Price : {{auto.price|currency:'TND'}}</p>
+        <p class="card-text small mb-2">Only {{auto.availability}} units</p>
+        <button class="btn btn-primary" (click)="showDetails(auto)">More details</button>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noCars>
+    <p class="text-muted">No cars found — try a different brand.</p>
+  </ng-template>
+ </div>

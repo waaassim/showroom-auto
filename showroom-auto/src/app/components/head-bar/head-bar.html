@@ -1,0 +1,16 @@
+<div class="container-fluid header">
+    <div class="d-flex align-items-center justify-content-between container">
+        <div class="d-flex align-items-center">
+            <div class="logo">SA</div>
+            <div class="brand-wrap">
+                <h1>Showroom Auto</h1>
+                <p class="subtitle">A curated selection of fine automobiles</p>
+            </div>
+        </div>
+
+        <nav class="brand-menu d-none d-md-flex">
+            <button class="btn btn-sm btn-link" (click)="selectBrand('')">All</button>
+            <button *ngFor="let b of brands" class="btn btn-sm btn-link" (click)="selectBrand(b)">{{b}}</button>
+        </nav>
+    </div>
+</div>

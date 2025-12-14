@@ -1,0 +1,25 @@
+.header{
+    padding: 28px 10px;
+    background: linear-gradient(90deg,var(--brand-blue),var(--brand-blue-2));
+}
+
+.brand-wrap{display:inline-block}
+.logo{
+    width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.08);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-weight:700;color:#fff;
+    box-shadow: 0 4px 20px rgba(11,102,168,0.18);
+    font-size:20px;letter-spacing:1px
+}
+
+.brand-wrap{margin-left:12px}
+.brand-wrap h1{color:#fff;margin:0;font-size:22px}
+.subtitle{color: rgba(255,255,255,0.92);margin:4px 0 0;font-size:12px}
+
+.brand-menu{gap:10px}
+.brand-menu .btn{color:rgba(255,255,255,0.95);opacity:0.95}
+.brand-menu .btn:hover{opacity:1;text-decoration:underline}
+
+.brand-menu{gap:10px}
+.brand-menu .btn{color:rgba(255,255,255,0.9);opacity:0.95}
+.brand-menu .btn:hover{opacity:1;text-decoration:underline}
+
